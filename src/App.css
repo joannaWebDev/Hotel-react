@@ -2,9 +2,10 @@
   text-align: left;
 }
 
-.App-logo {
+.app-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 20px;
+  float: right;
 }
 
 .App-header {
@@ -51,7 +52,21 @@ tr {
   padding-top: 20px;
   text-align: center;
 }
-
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 1% auto;
+}
 .card {
-  width: 18rem;
+  width: 15rem;
+}
+
+.card-img-top {
+  height: 60vh;
+}
+.btn-secondary {
+  padding: 0;
 }

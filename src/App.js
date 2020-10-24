@@ -1,12 +1,16 @@
 import React from "react";
 
-import Bookings from "./Bookings";
+import TouristInfoCards from "./components/TouristInfoCards";
+import Bookings from "./components/Bookings";
+import Heading from "./components/Heading";
+
 import "./App.css";
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">CYF Hotel</header>
+      <Heading />
+      <TouristInfoCards />
       <Bookings />
     </div>
   );
