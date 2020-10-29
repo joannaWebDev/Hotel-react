@@ -1,0 +1,15 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 1% auto;
+}
+.card {
+  width: 15rem;
+}
+
+.card-img-top {
+  height: 60vh;
+}
