@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./searchResults.css";
+import "./searchResults.css";
 
 const SearchResults = ({ results }) => {
   var moment = require("moment"); // require

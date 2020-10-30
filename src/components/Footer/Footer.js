@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 
-import styles from "./footer.css";
+import "./footer.css";
 
 const Footer = ({ footer }) => {
   const liMap = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./heading.css";
+import "./heading.css";
 
 const Heading = () => {
   return (
