@@ -1,5 +1,5 @@
 import React from "react";
-import "./touristcard.css";
+import styles from "./touristInfoCards.css";
 
 const TouristInfoCards = () => {
   return (

@@ -1,0 +1,10 @@
+.footerUl {
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+  margin-top: 20%;
+}
+.footerUl li {
+  list-style-type: none;
+  font-size: small;
+}
