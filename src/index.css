@@ -5,6 +5,8 @@
 }
 body {
   font-family: sans-serif;
+  max-width: 1290px;
+  overflow-x: hidden;
 }
 
 .search-wrapper {

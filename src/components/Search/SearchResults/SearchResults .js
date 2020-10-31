@@ -1,41 +1,43 @@
 import React from "react";
-import "./searchResults.css";
+import moment from "moment";
+import FakeBookings from "../../../data/fakeBookings.json";
 
-const SearchResults = ({ results }) => {
-  var moment = require("moment"); // require
-  moment().format();
+import "./search.css";
 
-  const tdMap = () => {
-    return results.map(result => {
-      return (
-        <tr>
-          <td key={result.id}>{result.id}</td>
-          <td key={result.title}>{result.title}</td>
-          <td key={result.firstName}>{result.firstName}</td>
-          <td key={result.surname}>{result.surname}</td>
-          <td key={result.email}>{result.email}</td>
-          <td key={result.roomId}>{result.roomId}</td>
-          <td key={result.checkInDate}>{result.checkInDate}</td>
-          <td key={result.checkOutDate}>{result.checkOutDate}</td>
-        </tr>
-      );
-    });
-  };
+const SearchResults = () => {
   return (
     <table>
-      <tbody>
+      <thead>
         <tr>
-          <th>id</th>
-          <th>title</th>
-          <th>firstname</th>
-          <th>surname</th>
-          <th>email</th>
-          <th>room id</th>
-          <th>check in date</th>
-          <th>check out date</th>
-          <th>nights</th>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">First name</th>
+          <th scope="col">Surname</th>
+          <th scope="col">Email</th>
+          <th scope="col">Room ID</th>
+          <th scope="col">Check in Date</th>
+          <th scope="col">Check out date</th>
+          <th scope="col">Total nights</th>
         </tr>
-        {tdMap()}
+      </thead>
+      <tbody>
+        {FakeBookings.map((booking, i) => {
+          const checkIn = moment(booking.checkInDate);
+          const checkOut = moment(booking.checkOutDate);
+          return (
+            <tr key={i}>
+              <th scope="row">{booking.id}</th>
+              <td>{booking.title}</td>
+              <td>{booking.firstName}</td>
+              <td>{booking.surname}</td>
+              <td>{booking.email}</td>
+              <td>{booking.roomId}</td>
+              <td>{booking.checkInDate}</td>
+              <td>{booking.checkOutDate}</td>
+              <td>{checkOut.diff(checkIn, "days")}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );

@@ -1,5 +1,5 @@
 .App {
-  text-align: left;
+  text-align: center;
 }
 
 .App-title {
@@ -9,14 +9,6 @@
 .App-content {
   padding-top: 20px;
   font-size: large;
-}
-
-.search {
-  padding: 5px 0 20px 0;
-}
-
-tr {
-  color: #5b5757;
 }
 
 .results {

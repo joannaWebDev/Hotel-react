@@ -2,9 +2,14 @@
   display: flex;
   gap: 10%;
   justify-content: center;
-  margin-top: 20%;
+  margin: 20% 2% 0 2%;
 }
 .footerUl li {
   list-style-type: none;
   font-size: small;
+}
+@media only screen and (max-width: 760px) {
+  .footerUl {
+    flex-direction: column;
+  }
 }
