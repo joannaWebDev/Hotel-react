@@ -7,11 +7,12 @@ import "./search.css";
 
 const SearchResults = () => {
   const [bookings, setBookings] = useState(FakeBookings);
-  const [selected, setSelected] = useState(false);
 
-  const changeColorOnClick = () => {
-    console.log("selected");
-    setSelected(!selected);
+  const [selected, setSelected] = useState(-1);
+
+  const changeColorOnClick = i => {
+    /* console.log("selected"); */
+    setSelected(i);
   };
 
   const getFakeBookings = () => {
@@ -25,10 +26,9 @@ const SearchResults = () => {
       return (
         <tr
           key={i}
-          onClick={changeColorOnClick}
-          className={selected ? "selected" : ""}
+          onClick={() => changeColorOnClick(i)}
+          className={selected === i ? "selected" : ""}
         >
-          {console.log(selected)}
           <th scope="row">{booking.id}</th>
           <td>{booking.title}</td>
           <td>{booking.firstName}</td>
