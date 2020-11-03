@@ -27,12 +27,12 @@ tbody td:nth-child(2) {
 tbody td:last-child {
   text-align: center;
 }
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   background: #ccc;
 }
 tr:nth-child(odd) {
   background: #fff;
-}
+} */
 @media only screen and (max-width: 760px) {
   /* Force table to not be like tables anymore */
   table,
@@ -86,4 +86,7 @@ tr:nth-child(odd) {
   td:nth-of-type(8):before {
     content: "Total nights: ";
   }
+}
+.selected {
+  background: yellow;
 }
