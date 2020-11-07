@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import moment from "moment";
-import FakeBookings from "../../../data/fakeBookings.json";
-import ChangeColorOnClick from "../ChangeColorOnClick";
+/* import FakeBookings from "../../../data/fakeBookings.json"; */
 
 import "./search.css";
 
-const SearchResults = () => {
-  const [bookings, setBookings] = useState(FakeBookings);
+const SearchResults = props => {
+  /* const [bookings, setBookings] = useState(FakeBookings); */
 
   const [selected, setSelected] = useState(-1);
 
@@ -16,7 +15,7 @@ const SearchResults = () => {
   };
 
   const getFakeBookings = () => {
-    return bookings.map((booking, i) => {
+    return props.results.map((booking, i) => {
       const checkIn = moment(booking.checkInDate);
       const checkOut = moment(booking.checkOutDate);
 
